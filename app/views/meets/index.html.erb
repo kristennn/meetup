@@ -1,1 +1,23 @@
-<h1>this is meets index file</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-8">
+      <div class="meetup">
+        <% @meets.each do |meet| %>
+          <div class="title">
+            <%= link_to meet.title, meet_path(meet) %>
+          </div>
+          <div class="info">
+            <%= meet.info %>
+          </div>
+        <% end %>
+        <hr>
+      </div>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+  </div>
+</div>
