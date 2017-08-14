@@ -12,6 +12,10 @@ class MeetsController < ApplicationController
     @meet = Meet.find(params[:id])
   end
 
+  def edit
+    @meet = Meet.find(params[:id])
+  end
+
   def create
     @meet = Meet.new(meet_params)
     if @meet.save
@@ -19,6 +23,21 @@ class MeetsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def update
+    @meet = Meet.find(params[:id])
+    if @meet.update(meet_params)
+      redirect_to meet_path(@meet)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @meet = Meet.find(params[:id])
+    @meet.destroy
+    redirect_to meets_path
   end
 
   private

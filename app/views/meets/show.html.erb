@@ -14,7 +14,8 @@
       </div>
     </div>
     <div class="col-md-2">
-
+      <button class="button"><%= link_to "Edit", edit_meet_path(@meet) %></button>
+      <button class="button"><%= link_to "Delete", meet_path(@meet), method: :delete, data: { confirm: "Are you sure?" } %></button>
     </div>
   </div>
 </div>
