@@ -1,2 +1,6 @@
 <h2>New meetup</h2>
-<%%>
+<%= simple_form_for @meet do |f| %>
+  <%= f.input :title %>
+  <%= f.input :info %>
+  <%= f.submit %>
+<% end %>
