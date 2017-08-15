@@ -10,6 +10,7 @@ class MeetsController < ApplicationController
 
   def show
     @meet = Meet.find(params[:id])
+    @comments = Comment.all
   end
 
   def edit

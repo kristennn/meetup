@@ -11,6 +11,9 @@
         <div class="info">
           <%= @meet.info %>
         </div>
+        <% @comments.each do |comment| %>
+          <%= render @meet.comments %>
+        <% end %>
       </div>
     </div>
     <div class="col-md-2">
